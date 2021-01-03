@@ -101,10 +101,12 @@
     function calcAverageProductPrice (products: Product[]) : number{
         let price : number = 0;
         for (const product of products){
-            for (let i = 0; i < products.length; i++){
-                price += product.price;
-            }
+            console.log(product.price);
+            price += product.price;
         }
+        console.log(price, products.length);
+
+        
         let avgPrice = price/products.length;
         console.log(avgPrice);
         return avgPrice;
@@ -169,9 +171,9 @@
             let totalValue = 0;
             for (const inventories of inventory){
                 for (let i = 0; i < inventory.length; i++){
-                    totalValue += (inventory.product.price * inventory.quantity);
-                }
-            }
+                    totalValue += (inventories.product.price * inventories.quantity);
+                };
+            };
             console.log(totalValue);
             return totalValue;
         }
