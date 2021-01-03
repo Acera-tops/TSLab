@@ -93,18 +93,24 @@ console.log("Average price is " + averagePrice);
 //Declare an array called inventory which is an array of type InventoryItem. Fill the array.
 const inventory = [
     {
-        product, : .name, 'motor': ,
-        product, : .price, 10.00: ,
-        quantity: 10,
+        product: {
+            name: 'motor',
+            price: 10.00
+        },
+        quantity: 10
     },
     {
-        product, : .name, 'sensor': ,
-        product, : .price, 12.50: ,
-        quantity: 4,
+        product: {
+            name: 'sensor',
+            price: 12.50
+        },
+        quantity: 4
     },
     {
-        product, : .name, 'LED': ,
-        product, : .price, 1.00: ,
+        product: {
+            name: 'LED',
+            price: 1.00
+        },
         quantity: 20
     },
 ];
@@ -127,3 +133,4 @@ function calcInventoryValue(items) {
 //Call calcInventoryValue, passing it your products array as an argument.
 // ● Store the result of the function call (the return value) in a variable and then console.log
 // the variable. (Hint: It prints 170).
+// calcAverageProductPrice(inventory);
