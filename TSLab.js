@@ -123,16 +123,16 @@ const inventory = [
 function calcInventoryValue(items) {
     let totalValue = 0;
     for (const inventories of inventory) {
-        for (let i = 0; i < inventory.length; i++) {
-            totalValue += (inventories.product.price * inventories.quantity);
-        }
-        ;
+        // for (let i = 0; i < inventory.length; i++){
+        totalValue += (inventories.product.price * inventories.quantity);
     }
     ;
     console.log(totalValue);
     return totalValue;
 }
+;
 //Call calcInventoryValue, passing it your products array as an argument.
 // ● Store the result of the function call (the return value) in a variable and then console.log
 // the variable. (Hint: It prints 170).
-// calcAverageProductPrice(inventory);
+let inventoryValue = calcInventoryValue(inventory);
+console.log("Total inventory value is " + inventoryValue);
